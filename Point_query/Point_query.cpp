@@ -54,24 +54,27 @@ int main() {
     InputDistances.push_back(21348.7);
     InputDistances.push_back(18431.1);
     InputDistances.push_back(7004.22);
+    
+    //sort edges based on distances
 
-    std::vector<int> ids;
+    std::sort(edges.begin(), edges.end(), [](const edge& a, const edge& b) {
+        return a.dist < b.dist;
+        });
 
-    for (auto & e : edges) {
-        if (InputDistances[0] = e.dist) {
-            ids.push_back(e.p0.id);
-            ids.push_back(e.p1.id);
-        }
+        for (auto& e : edges) {
+            std::cout << e.dist << "\n";
     }
+
+
 
     
 
-    std::cout << bimPoints.size() << "\n";
-    std::cout << edges.size() << "\n";
-    std::cout << bimPoints[0].pos.x << "\n";
-    std::cout << bimPoints[1].pos.x << "\n";
+    //std::cout << bimPoints.size() << "\n";
+    //std::cout << edges.size() << "\n";
+    //std::cout << bimPoints[0].pos.x << "\n";
+    //std::cout << bimPoints[1].pos.x << "\n";
 
-
+    
   
 }
 
